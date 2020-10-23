@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './common/header/header.component';
 import { PublicComponent } from './public/public.component';
 import { DeshboardComponent } from './public/deshboard/deshboard.component';
+import { FooterComponent } from './common/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PublicComponent,
-    DeshboardComponent
+    DeshboardComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
