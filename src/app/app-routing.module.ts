@@ -8,12 +8,9 @@ const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot([
-    { path: '', component: AppComponent },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '', component: PublicComponent, data: { title: 'Public Views' }, children: PUBLIC_ROUTES },
-    {
-      path: '**',
-      redirectTo: '/'
-    }
+    
   ])],
   exports: [RouterModule]
 })

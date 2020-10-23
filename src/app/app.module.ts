@@ -7,6 +7,7 @@ import { HeaderComponent } from './common/header/header.component';
 import { PublicComponent } from './public/public.component';
 import { DeshboardComponent } from './public/deshboard/deshboard.component';
 import { FooterComponent } from './common/footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './common/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
