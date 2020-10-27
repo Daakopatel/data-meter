@@ -7,13 +7,16 @@ import { HeaderComponent } from './common/header/header.component';
 import { PublicComponent } from './public/public.component';
 import { DeshboardComponent } from './public/deshboard/deshboard.component';
 import { FooterComponent } from './common/footer/footer.component';
+import { AgeComponent } from './public/age/age.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // mat data
 import {MatNativeDateModule} from '@angular/material/core';
+import {MatCardModule} from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { SidebarComponent } from './common/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     HeaderComponent,
     PublicComponent,
     DeshboardComponent,
-    FooterComponent
+    FooterComponent,
+    SidebarComponent,
+    AgeComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatDatepickerModule,
     MatFormFieldModule,
     MatInputModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
