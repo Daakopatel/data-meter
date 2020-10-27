@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class AgeComponent implements OnInit {
 
   constructor() { }
+  picker1 : any;
+  picker2 : any;
 
   ngOnInit(): void {
   }

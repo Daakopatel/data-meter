@@ -9,14 +9,15 @@ import { DeshboardComponent } from './public/deshboard/deshboard.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { AgeComponent } from './public/age/age.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SidebarComponent } from './common/sidebar/sidebar.component';
 
 // mat data
-import {MatNativeDateModule} from '@angular/material/core';
-import {MatCardModule} from '@angular/material/card';
+import { MaterialModule } from './material.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import { SidebarComponent } from './common/sidebar/sidebar.component';
+// import { MatDatepickerModule } from '@angular/material/datepicker';
+// import { MatNativeDateModule } from '@angular/material/core';
+// import { MatCardModule } from '@angular/material/card';
+// import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -32,11 +33,12 @@ import { SidebarComponent } from './common/sidebar/sidebar.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatDatepickerModule,
+    MaterialModule,
     MatFormFieldModule,
-    MatInputModule,
-    MatNativeDateModule,
-    MatCardModule
+    // MatDatepickerModule,
+    // MatInputModule,
+    // MatNativeDateModule,
+    // MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
