@@ -28,7 +28,11 @@
         }
         a{
             position: absolute;
-            right: 0;
+            right: 50px;
+            color: darkblue;
+            &:hover{
+                color:#ff3636;
+            }
         }
     }   
 }
