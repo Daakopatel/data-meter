@@ -10,8 +10,9 @@ const routes: Routes = [];
   imports: [RouterModule.forRoot([
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '', component: PublicComponent, data: { title: 'Public Views' }, children: PUBLIC_ROUTES },
-    
-  ])],
+], {
+    initialNavigation: 'enabled'
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

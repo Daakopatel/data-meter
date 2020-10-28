@@ -30,7 +30,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     AgeComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
