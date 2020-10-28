@@ -10,6 +10,7 @@ import { FooterComponent } from './common/footer/footer.component';
 import { AgeComponent } from './public/age/age.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SidebarComponent } from './common/sidebar/sidebar.component';
+import { FormsModule } from '@angular/forms';
 
 // mat data
 import { MaterialModule } from './material.module';
@@ -36,7 +37,8 @@ import {  MatDatepickerModule } from '@angular/material';
     BrowserAnimationsModule,
     MaterialModule,
     MatFormFieldModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    FormsModule
     // MatDatepickerModule,
     // MatInputModule,
     // MatNativeDateModule,

@@ -5,55 +5,55 @@
     <div class="age-main">
         <mat-form-field appearance="fill">
             <mat-label>BirthDate</mat-label>
-            <input  matInput [matDatepicker]="picker" placeholder="Choose a date">
+            <input  matInput [matDatepicker]="picker" [(ngModel)]="birthdate" placeholder="Choose a date">
             <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
 
         <mat-form-field appearance="fill">
-            <mat-label>BirthDate</mat-label>
-            <input  matInput [matDatepicker]="picker1" placeholder="Choose a date">
+            <mat-label>Today's Date is</mat-label>
+            <input  matInput [matDatepicker]="picker1" [(ngModel)]="todaydate" placeholder="Choose a date">
             <mat-datepicker-toggle [for]="picker1" matSuffix></mat-datepicker-toggle>
             <mat-datepicker #picker1></mat-datepicker>
         </mat-form-field>
-        <button>Submit</button>
+        <button (click) = "onSubmit()">Submit</button>
     </div>
-    <div class="counting">
+    <div class="counting"[ngStyle]="{'margin-bottom.px':this.more ? '0' : '45'}">
         <table>
             <div>
                 <tr>
                     <td>Age:</td>
-                    <td>0</td>
+                    <td>{{this.year ? this.year : '00'}}</td>
                 </tr>
                 <tr>
                     <td>Months:</td>
-                    <td>0</td>
+                    <td>{{this.month ? this.month : '00'}}</td>
                 </tr>
                 <tr>
                     <td>Weeks :</td>
-                    <td>0</td>
+                    <td>{{this.week ? this.week : '00'}}</td>
                 </tr>
                 <tr>
                     <td>Days:</td>
-                    <td>0</td>
+                    <td>{{this.day ? this.day : '00'}}</td>
                 </tr>
 
             </div>
-            <div [ngClass]="this.more ? 'show' : 'hide'">
+            <div class="more" [ngClass]="this.more ? 'show' : 'hide'">
                 <tr>
                     <td>Hours:</td>
-                    <td>0</td>
+                    <td>{{this.hour ? this.hour : '00'}}</td>
                 </tr>
                 <tr>
                     <td>Minutes:</td>
-                    <td>0</td>
+                    <td>{{this.minute ? this.minute : '00'}}</td>
                 </tr>
                 <tr>
                     <td>Seconds:</td>
-                    <td>0</td>
+                    <td>{{this.second ? this.second : '00'}}</td>
                 </tr>
             </div>
         </table>
-        <a (click)="onMoreClick()">More</a>
+        <a (click)="onMoreClick()">{{this.more ? 'Less' : 'More'}}</a>
     </div>
 </div>
