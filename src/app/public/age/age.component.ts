@@ -8,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class AgeComponent implements OnInit {
 
   constructor() { }
-  picker1 : any;
-  picker2 : any;
+  picker1: any;
+  picker2: any;
+  public more: boolean = false;
 
   ngOnInit(): void {
+
+  }
+
+  onMoreClick() {
+    this.more = !this.more
   }
 
 }

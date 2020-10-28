@@ -39,7 +39,7 @@
                 </tr>
 
             </div>
-            <div class="add">
+            <div [ngClass]="this.more ? 'show' : 'hide'">
                 <tr>
                     <td>Hours:</td>
                     <td>0</td>
@@ -54,6 +54,6 @@
                 </tr>
             </div>
         </table>
-        <a href="">More</a>
+        <a (click)="onMoreClick()">More</a>
     </div>
 </div>

@@ -14,6 +14,7 @@ import { SidebarComponent } from './common/sidebar/sidebar.component';
 // mat data
 import { MaterialModule } from './material.module';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {  MatDatepickerModule } from '@angular/material';
 // import { MatDatepickerModule } from '@angular/material/datepicker';
 // import { MatNativeDateModule } from '@angular/material/core';
 // import { MatCardModule } from '@angular/material/card';
@@ -35,6 +36,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     BrowserAnimationsModule,
     MaterialModule,
     MatFormFieldModule,
+    MatDatepickerModule
     // MatDatepickerModule,
     // MatInputModule,
     // MatNativeDateModule,
