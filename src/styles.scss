@@ -163,7 +163,22 @@ body {
     background-color: #e2eff3;
 }
 
-
+button{
+    background-color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    color: rgb(0, 0, 0);
+    border: 1px solid gray;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 30px;
+    margin: 10px 10px 10px 75px;
+    transition: 0.5s;
+    &:hover{
+        background-color: #947dcc;
+        border: 1px solid #947dcc;
+        color: white;
+    }
+}
 
 
 
@@ -177,3 +192,7 @@ body {
 mat-form-field {
     margin : 10px
 }
+.mat-focused {
+          color: yellow;
+      }
+  
