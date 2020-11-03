@@ -1,0 +1,35 @@
+<div class="container">
+    <h1>Login Form</h1>
+    <div class="data">
+        <form [formGroup]="formsubmit">
+            
+            <input type="text" placeholder="First Name" formControlName='firstName' required ng-model="firstName">
+            <div style="color: rgb(255, 0, 0);"
+                *ngIf="(formsubmit.controls.firstName.dirty || formsubmit.controls.firstName.touched) &&  formsubmit.controls.firstName.errors">
+                *required</div> <br>
+
+
+            <input type="text" name="email" placeholder="Enter Your Email Id" formControlName='lastName'
+                pattern="[^ @]*@[^ @]*">
+            <div style="color: red;"
+                *ngIf="formsubmit.controls.lastName.errors && (formsubmit.controls.lastName.dirty || formsubmit.controls.lastName.touched)">
+                <div *ngIf="formsubmit.controls.lastName.errors.pattern">Email must contain at least the @ character
+                </div>
+            </div>
+            <br>
+
+            <input type="text" name="number" placeholder="Enter Your Number" formControlName='number' minlength="10">
+            <div style="color: red;"
+                *ngIf="formsubmit.controls.number.errors && (formsubmit.controls.number.dirty || formsubmit.controls.number.touched)">
+                <div *ngIf="formsubmit.controls.number.errors.minlength">Must be at last 10 Character</div>
+            </div>
+            <br>
+
+            <button type="submit" (click)='onSubmit()'>Login</button>
+            <button type="register" routerLink="/register">Register</button>
+        </form>
+    </div>
+</div>
+<!-- Name: {{formsubmit.value.firstName}} <br>
+Eamil: {{formsubmit.value.lastName}} <br>
+Number: {{formsubmit.value.number}} -->
