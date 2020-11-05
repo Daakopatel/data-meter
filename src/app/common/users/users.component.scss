@@ -1,0 +1,31 @@
+.container {
+    ul{
+        display: flex;
+        li{
+            // margin: 10px;
+            text-decoration: none;
+            list-style-type: none;
+        }
+    }
+    .dts{
+        margin: 30px;
+        h1{
+            margin: 30px 0;
+            font-size: 20px;
+        }
+        a{
+            text-decoration: none;
+            margin: 30px 0;
+            padding: 10px;
+            background-color: #3f51b5;
+            color: white;
+            border-radius: 5px;
+            transition: 0.5s;
+            &:hover{
+                color: black;
+                border: 1px solid #3f51b5;
+                background-color: white;
+            }
+        }
+    }
+}

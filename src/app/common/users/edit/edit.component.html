@@ -1,0 +1,21 @@
+<app-users></app-users>
+<h1>Users</h1>
+<a routerLink="/adduser" class="btn btn-sm btn-success mb-2"><button>Add User</button></a>
+<div class="table">
+    <table>
+        <tr>
+          <th>FirstName</th>
+          <th>LastName</th>
+          <th>Username</th>
+          <th>Password</th>
+        </tr>
+        <tr *ngFor="let data of profileData">
+          <td>{{data.firstName}}</td>
+          <td>{{data.lastName}}</td>
+          <td>{{data.userName}}</td>
+          <td>{{data.password}}</td>
+          <button routerLink="/adduser">Edit</button>
+          <button (click)="deletedata(data.id)">Delete</button>
+        </tr>
+      </table>
+</div>

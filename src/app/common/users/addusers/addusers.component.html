@@ -1,33 +1,33 @@
 <div class="main">
     <div class="container">
-        <h1>Register Form</h1>
-        <div class="register" >
-            <form [formGroup]="regform">
+        <h1>Edit User</h1>
+        <div class="edit" >
+            <form [formGroup]="adduserform">
                 <mat-form-field appearance="outline">
                     <mat-label>First Name</mat-label>
                     <input matInput formControlName='firstName' required>
-                    <mat-error *ngIf="regform.controls.firstName.invalid">First name is required.</mat-error>
+                    <mat-error *ngIf="adduserform.controls.firstName.invalid">First name is required.</mat-error>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
                     <mat-label>Last Name</mat-label>
                     <input matInput formControlName='lastName' required>
-                    <mat-error *ngIf="regform.controls.lastName.invalid">Last name is required.</mat-error>
+                    <mat-error *ngIf="adduserform.controls.lastName.invalid">Last name is required.</mat-error>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
                     <mat-label>Username</mat-label>
                     <input matInput formControlName='userName' required>
-                    <mat-error *ngIf="regform.controls.userName.invalid">Username is required.</mat-error>
+                    <mat-error *ngIf="adduserform.controls.userName.invalid">Username is required.</mat-error>
                 </mat-form-field>
 
                 <mat-form-field appearance="outline">
                     <mat-label>Password</mat-label>
                     <input matInput [type]="hide ? 'password' : 'text'" formControlName='password' minlength="6">
-                    <mat-error *ngIf="regform.controls.password.invalid">Your password must have one uppercase letter, one lowercase letter, one number and one non alphanumeric character.</mat-error>
+                    <mat-error *ngIf="adduserform.controls.password.invalid">Your password must have one uppercase letter, one lowercase letter, one number and one non alphanumeric character.</mat-error>
                 </mat-form-field>
 
-                <button routerLink="/login" [disabled]="!regform.valid" (click)="onRegister()">Register</button>
+                <button routerLink="/login" [disabled]="!adduserform.valid" (click)="onEdit()">Edit</button>
             </form>
 
         </div>

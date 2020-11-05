@@ -10,20 +10,24 @@ import {HttpClient} from '@angular/common/http';
 export class LoginComponent implements OnInit {
   formsubmit : FormGroup;
   public profileData : any;
+  hide = true;
  apiurl= 'http://localhost:3000/login';
 
 
   constructor(private formbuild : FormBuilder, private http: HttpClient) 
   {
     this.formsubmit= this.formbuild.group({
-      firstName: '',
-      lastName: '',
-      number: ''
+      userName: '',
+      password: ''
      })
    }
 
   ngOnInit(): void {
     this.getData()
+    this.formsubmit = new FormGroup({
+      userName: new FormControl('', [Validators.required]),
+      password : new FormControl('', [Validators.required, Validators.minLength(8), Validators.pattern('^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&])[A-Za-z\\d$@$!%*?&]{8,}')]),
+    });
   }
 
   getData() {

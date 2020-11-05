@@ -1,8 +1,8 @@
-.mainlogin{
+.main{
     border: 3px solid darkblue;
     border-radius: 10px;
-    margin: 50px auto;
-    width: 40%;
+    margin: 0 auto;
+    width: 80%;
     
     .container{
         text-align: center;
@@ -13,15 +13,12 @@
         form{
             padding: 20px 10px;
             button{
-                margin: 35px 10px 20px 10px;
+                margin: 35px 0 20px 0;
             }
         }
     }
 }
 .mat-form-field {
-    width: 80%;
+    width: 45%;
     height: 75px;
-    input{
-        color: black;
-    }
 }

@@ -22,6 +22,8 @@ import {  MatDatepickerModule } from '@angular/material';
 import { LoginComponent } from './common/login/login.component';
 import { RegisterComponent } from './common/register/register.component';
 import { UsersComponent } from './common/users/users.component';
+import { EditComponent } from './common/users/edit/edit.component';
+import { AddusersComponent } from './common/users/addusers/addusers.component';
 // import { MatDatepickerModule } from '@angular/material/datepicker';
 // import { MatNativeDateModule } from '@angular/material/core';
 // import { MatCardModule } from '@angular/material/card';
@@ -38,7 +40,9 @@ import { UsersComponent } from './common/users/users.component';
     AgeComponent,
     LoginComponent,
     RegisterComponent,
-    UsersComponent
+    UsersComponent,
+    EditComponent,
+    AddusersComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
